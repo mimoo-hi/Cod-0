@@ -1,0 +1,105 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.3);  /* شفاف 70% */
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== جميع الوحدات ===== */
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#battery,
+#network,
+#pulseaudio,
+#tray {
+  padding: 0 10px;
+  margin: 5px 3px;
+  border-radius: 12px;
+  background: transparent;  /* خلفية شفافة */
+  color: #ffffff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);  /* ظل للنص عشان يبان */
+}
+
+/* ===== أيقونات Nerd Font ===== */
+#clock::before {
+  content: " ";  /* أيقونة الساعة */
+  font-size: 16px;
+}
+
+#cpu::before {
+  content: " ";  /* أيقونة المعالج */
+}
+
+#memory::before {
+  content: " ";  /* أيقونة الرام */
+}
+
+#disk::before {
+  content: " ";  /* أيقونة القرص */
+}
+
+#temperature::before {
+  content: " ";  /* أيقونة الحرارة */
+}
+
+#backlight::before {
+  content: " ";  /* أيقونة الإضاءة */
+}
+
+#battery::before {
+  content: " ";  /* أيقونة البطارية */
+}
+
+#network::before {
+  content: " ";  /* أيقونة الشبكة */
+}
+
+#pulseaudio::before {
+  content: " ";  /* أيقونة الصوت */
+}
+
+/* ===== وحدات اليسار ===== */
+#workspaces button {
+  padding: 0 12px;
+  margin: 0 2px;
+  border-radius: 10px;
+  background: transparent;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+}
+
+#workspaces button.focused {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ===== تأثير التكيف مع الخلفية (اختياري) ===== */
+/* يجعل النص أبيض على داكن وأسود على فاتح */
+#clock, #cpu, #memory, #disk, #temperature, #backlight, #battery, #network, #pulseaudio {
+  mix-blend-mode: difference;
+}
+
+/* ===== أيقونة التراي ===== */
+#tray {
+  background: transparent;
+}
+
+#tray > .ne {
+  padding: 0 6px;
+}
