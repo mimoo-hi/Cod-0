@@ -1,0 +1,33 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36, 
+    "spacing": 10,
+    "modules-left": [],
+    "modules-center": [],
+    "modules-right": ["clock", "cpu", "memory", "temperature", "network", "battery", "custom/prayers"],
+
+    "clock": { "format": "  {:%H:%M}", "tooltip-format": "{:%A, %d %B %Y}" },
+
+    "cpu": { "format": " {usage}%", "interval": 2 },
+    "memory": { "format": " {percentage}%", "interval": 2 },
+    "temperature": { "format": " {temperatureC}°C", "interval": 5 },
+
+    "network": { 
+        "format-wifi": " {essid}", 
+        "format-ethernet": " {ifname}", 
+        "format-disconnected": ""
+    },
+
+    "battery": { 
+        "format": " {capacity}%", 
+        "format-charging": " {capacity}%", 
+        "interval": 5 
+    },
+
+    "custom/prayers": {
+        "exec": "bash ~/.local/bin/prayer-times waybar",
+        "interval": 3600,
+        "format": "  {}"
+    }
+}
