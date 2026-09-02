@@ -1,0 +1,29 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 12,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "battery", "custom/prayers"],
+    
+    "hyprland/workspaces": { "format": "{icon}" },
+    
+    "clock": { "format": "{:%H:%M:%S}", "tooltip-format": "{:%A, %d %B %Y}" },
+    
+    "network": { "format-wifi": " {essid}", "format-ethernet": " {ifname}", "format-disconnected": "" },
+    
+    "cpu": { "format": " {usage}%", "interval": 2 },
+    
+    "memory": { "format": " {percentage}%", "interval": 2 },
+    
+    "temperature": { "format": " {temperatureC}°C", "interval": 5 },
+    
+    "battery": { "format": " {capacity}% {icon}", "format-charging": " {capacity}%", "interval": 5 },
+    
+    "custom/prayers": {
+        "exec": "bash ~/.local/bin/prayer-times waybar",
+        "interval": 3600,
+        "format": "  {}"
+    }
+}
