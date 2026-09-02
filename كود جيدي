@@ -1,0 +1,88 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#battery,
+#network,
+#pulseaudio,
+#tray {
+  padding: 0 10px;
+  margin: 5px 3px;
+  border-radius: 12px;
+  background: transparent;
+  color: #ffffff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+#clock::before {
+  content: " ";
+  font-size: 16px;
+}
+#cpu::before {
+  content: " ";
+}
+#memory::before {
+  content: " ";
+}
+#disk::before {
+  content: " ";
+}
+#temperature::before {
+  content: " ";
+}
+#backlight::before {
+  content: " ";
+}
+#battery::before {
+  content: " ";
+}
+#network::before {
+  content: " ";
+}
+#pulseaudio::before {
+  content: " ";
+}
+
+#workspaces button {
+  padding: 0 12px;
+  margin: 0 2px;
+  border-radius: 10px;
+  background: transparent;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+}
+
+#workspaces button.focused {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+#clock, #cpu, #memory, #disk, #temperature, #backlight, #battery, #network, #pulseaudio {
+  mix-blend-mode: difference;
+}
+
+#tray {
+  padding: 0 6px;
+  background: transparent;
+}
