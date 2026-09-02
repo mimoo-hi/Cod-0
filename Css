@@ -1,0 +1,132 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  border-bottom: 2px solid #2d2d2d;
+}
+
+/* ===== جميع الوحدات ===== */
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#battery,
+#network,
+#pulseaudio,
+#tray {
+  padding: 0 10px;
+  margin: 5px 3px;
+  border-radius: 12px;
+  background: #242424;
+  min-height: 28px;
+}
+
+/* ===== وحدات اليسار ===== */
+#workspaces button {
+  padding: 0 10px;
+  margin: 0 2px;
+  border-radius: 10px;
+  background: #2d2d2d;
+  color: #888888;
+}
+
+#workspaces button.focused {
+  background: #4a90d9;
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  background: #3d3d3d;
+}
+
+/* ===== وحدات اليمين ===== */
+#battery {
+  background: #2d7d2d;
+  color: #ffffff;
+}
+
+#battery.warning {
+  background: #cc7722;
+  color: #ffffff;
+}
+
+#battery.critical {
+  background: #cc2233;
+  color: #ffffff;
+}
+
+#cpu {
+  background: #2a5f7a;
+  color: #ffffff;
+}
+
+#memory {
+  background: #5a4a8a;
+  color: #ffffff;
+}
+
+#disk {
+  background: #3a6a5a;
+  color: #ffffff;
+}
+
+#temperature {
+  background: #8a4a2a;
+  color: #ffffff;
+}
+
+#temperature.critical {
+  background: #cc2233;
+  color: #ffffff;
+}
+
+#backlight {
+  background: #4a4a4a;
+  color: #ffdd44;
+}
+
+#network {
+  background: #1a6a7a;
+  color: #ffffff;
+}
+
+#network.disconnected {
+  background: #662222;
+  color: #ffffff;
+}
+
+#pulseaudio {
+  background: #5a4a6a;
+  color: #ffffff;
+}
+
+#pulseaudio.muted {
+  background: #444444;
+  color: #888888;
+}
+
+#clock {
+  background: #1a3a5a;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#tray {
+  background: #2a2a2a;
+}
+
+/* ===== التاريخ (اختياري) ===== */
+#clock {
+  font-size: 16px;
+  padding: 0 18px;
+}
