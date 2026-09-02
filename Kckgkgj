@@ -1,0 +1,13 @@
+* {
+    font-family: "Figtree", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+window#waybar {
+    background: rgba(0,0,0,0.85);
+    color: #ffffff;
+    border-radius: 8px;
+}
+#clock, #cpu, #memory, #network, #battery, #temperature, #custom-prayers {
+    padding: 0 10px;
+}
